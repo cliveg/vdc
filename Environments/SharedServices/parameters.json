@@ -734,12 +734,8 @@
             },
             "NetworkAcls": {
                 "bypass": "AzureServices",
-                "defaultAction": "Deny",
-                "virtualNetworkRules": [
-                    {
-                        "subnet": "${Parameters.ModuleConfigurationParameters.VirtualNetwork.Subnets[0].Name}"
-                    }
-                ],
+                "defaultAction": "Allow",
+                "virtualNetworkRules": [],
                 "ipRules": []
             }
         },
