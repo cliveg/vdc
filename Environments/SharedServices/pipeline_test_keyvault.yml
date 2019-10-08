@@ -36,3 +36,98 @@ stages:
         ORGANIZATION_NAME: $(ORGANIZATION_NAME)
         VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
         VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
+    - task: AzurePowerShell@4
+      displayName: "Creates Windows Jumpbox KEK"
+      inputs:
+        azureSubscription: 'vdc2-hub'
+        ScriptType: 'FilePath'
+        ScriptPath: 'Orchestration/OrchestrationService/ModuleConfigurationDeployment.ps1'
+        ScriptArguments: '-DefinitionPath "Environments/SharedServices/definition.json" -ModuleConfigurationName "WindowsJumpboxKek"'
+        azurePowerShellVersion: 'LatestVersion'
+      env:
+        ADMIN_USER_PWD: $(ADMIN_USER_PWD)
+        ADMIN_USER_SSH: $(ADMIN_USER_SSH)
+        DEVOPS_SERVICE_PRINCIPAL_USER_ID: $(DEVOPS_SERVICE_PRINCIPAL_USER_ID)
+        KEYVAULT_MANAGEMENT_USER_ID: $(KEYVAULT_MANAGEMENT_USER_ID)
+        DOMAIN_ADMIN_USER_PWD: $(DOMAIN_ADMIN_USER_PWD)
+        DOMAIN_ADMIN_USERNAME: $(DOMAIN_ADMIN_USERNAME)
+        TENANT_ID: $(TENANT_ID)
+        ORGANIZATION_NAME: $(ORGANIZATION_NAME)
+        VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
+        VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
+    - task: AzurePowerShell@4
+      displayName: "Creates Linux Jumpbox KEK"
+      inputs:
+        azureSubscription: 'vdc2-hub'
+        ScriptType: 'FilePath'
+        ScriptPath: 'Orchestration/OrchestrationService/ModuleConfigurationDeployment.ps1'
+        ScriptArguments: '-DefinitionPath "Environments/SharedServices/definition.json" -ModuleConfigurationName "LinuxJumpboxKek"'
+        azurePowerShellVersion: 'LatestVersion'
+      env:
+        ADMIN_USER_PWD: $(ADMIN_USER_PWD)
+        ADMIN_USER_SSH: $(ADMIN_USER_SSH)
+        DEVOPS_SERVICE_PRINCIPAL_USER_ID: $(DEVOPS_SERVICE_PRINCIPAL_USER_ID)
+        KEYVAULT_MANAGEMENT_USER_ID: $(KEYVAULT_MANAGEMENT_USER_ID)
+        DOMAIN_ADMIN_USER_PWD: $(DOMAIN_ADMIN_USER_PWD)
+        DOMAIN_ADMIN_USERNAME: $(DOMAIN_ADMIN_USERNAME)
+        TENANT_ID: $(TENANT_ID)
+        ORGANIZATION_NAME: $(ORGANIZATION_NAME)
+        VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
+        VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
+    - task: AzurePowerShell@4
+      displayName: "Creates Active Directory KEK"
+      inputs:
+        azureSubscription: 'vdc2-hub'
+        ScriptType: 'FilePath'
+        ScriptPath: 'Orchestration/OrchestrationService/ModuleConfigurationDeployment.ps1'
+        ScriptArguments: '-DefinitionPath "Environments/SharedServices/definition.json" -ModuleConfigurationName "ActiveDirectoryKek"'
+        azurePowerShellVersion: 'LatestVersion'
+      env:
+        ADMIN_USER_PWD: $(ADMIN_USER_PWD)
+        ADMIN_USER_SSH: $(ADMIN_USER_SSH)
+        DEVOPS_SERVICE_PRINCIPAL_USER_ID: $(DEVOPS_SERVICE_PRINCIPAL_USER_ID)
+        KEYVAULT_MANAGEMENT_USER_ID: $(KEYVAULT_MANAGEMENT_USER_ID)
+        DOMAIN_ADMIN_USER_PWD: $(DOMAIN_ADMIN_USER_PWD)
+        DOMAIN_ADMIN_USERNAME: $(DOMAIN_ADMIN_USERNAME)
+        TENANT_ID: $(TENANT_ID)
+        ORGANIZATION_NAME: $(ORGANIZATION_NAME)
+        VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
+        VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
+    - task: AzurePowerShell@4
+      displayName: "Creates Active Directory Domain Services Kek"
+      inputs:
+        azureSubscription: 'vdc2-hub'
+        ScriptType: 'FilePath'
+        ScriptPath: 'Orchestration/OrchestrationService/ModuleConfigurationDeployment.ps1'
+        ScriptArguments: '-DefinitionPath "Environments/SharedServices/definition.json" -ModuleConfigurationName "ActiveDirectoryDomainServicesKek"'
+        azurePowerShellVersion: 'LatestVersion'
+      env:
+        ADMIN_USER_PWD: $(ADMIN_USER_PWD)
+        ADMIN_USER_SSH: $(ADMIN_USER_SSH)
+        DEVOPS_SERVICE_PRINCIPAL_USER_ID: $(DEVOPS_SERVICE_PRINCIPAL_USER_ID)
+        KEYVAULT_MANAGEMENT_USER_ID: $(KEYVAULT_MANAGEMENT_USER_ID)
+        DOMAIN_ADMIN_USER_PWD: $(DOMAIN_ADMIN_USER_PWD)
+        DOMAIN_ADMIN_USERNAME: $(DOMAIN_ADMIN_USERNAME)
+        TENANT_ID: $(TENANT_ID)
+        ORGANIZATION_NAME: $(ORGANIZATION_NAME)
+        VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
+        VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
+    - task: AzurePowerShell@4
+      displayName: "Enables Service Endpoint on Key Vault"
+      inputs:
+        azureSubscription: 'vdc2-hub'
+        ScriptType: 'FilePath'
+        ScriptPath: 'Orchestration/OrchestrationService/ModuleConfigurationDeployment.ps1'
+        ScriptArguments: '-DefinitionPath "Environments/SharedServices/definition.json" -ModuleConfigurationName "EnableServiceEndpointOnKeyVault"'
+        azurePowerShellVersion: 'LatestVersion'
+      env:
+        ADMIN_USER_PWD: $(ADMIN_USER_PWD)
+        ADMIN_USER_SSH: $(ADMIN_USER_SSH)
+        DEVOPS_SERVICE_PRINCIPAL_USER_ID: $(DEVOPS_SERVICE_PRINCIPAL_USER_ID)
+        KEYVAULT_MANAGEMENT_USER_ID: $(KEYVAULT_MANAGEMENT_USER_ID)
+        DOMAIN_ADMIN_USER_PWD: $(DOMAIN_ADMIN_USER_PWD)
+        DOMAIN_ADMIN_USERNAME: $(DOMAIN_ADMIN_USERNAME)
+        TENANT_ID: $(TENANT_ID)
+        ORGANIZATION_NAME: $(ORGANIZATION_NAME)
+        VDC_SUBSCRIPTIONS: $(VDC_SUBSCRIPTIONS)
+        VDC_TOOLKIT_SUBSCRIPTION: $(VDC_TOOLKIT_SUBSCRIPTION)
