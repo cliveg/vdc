@@ -33,7 +33,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/StorageAccounts/2.0/Tests";
+          Invoke-Pester -Script "./Modules/StorageAccounts/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -117,7 +117,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/LogAnalytics/2.0/Tests";
+          Invoke-Pester -Script "./Modules/LogAnalytics/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -172,7 +172,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/AutomationAccounts/2.0/Tests";
+          Invoke-Pester -Script "./Modules/AutomationAccounts/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -208,7 +208,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/ApplicationSecurityGroups/2.0/Tests";
+          Invoke-Pester -Script "./Modules/ApplicationSecurityGroups/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -263,7 +263,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/NetworkSecurityGroups/2.0/Tests";
+          Invoke-Pester -Script "./Modules/NetworkSecurityGroups/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -318,7 +318,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/RouteTables/2.0/Tests";
+          Invoke-Pester -Script "./Modules/RouteTables/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -354,7 +354,7 @@ stages:
         targetType: 'inline'
         script: '
           
-          Invoke-Pester -Script "./Modules/VirtualNetwork/2.0/Tests";'
+          Invoke-Pester -Script "./Modules/VirtualNetwork/Tests";'
         pwsh: true
     - task: AzurePowerShell@4
       displayName: "ARM Validation - Virtual Network"
@@ -388,7 +388,7 @@ stages:
         targetType: 'inline'
         script: '
           
-          Invoke-Pester -Script "./Modules/AzureFirewall/2.0/Tests";'
+          Invoke-Pester -Script "./Modules/AzureFirewall/Tests";'
         pwsh: true
     - task: AzurePowerShell@4
       displayName: "ARM Validation - Azure Firewall"
@@ -422,7 +422,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/KeyVault/2.0/Tests";
+          Invoke-Pester -Script "./Modules/KeyVault/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -458,7 +458,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/VirtualMachines/2.0/Tests";
+          Invoke-Pester -Script "./Modules/VirtualMachines/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -551,7 +551,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/ActiveDirectory/2.0/Tests";
+          Invoke-Pester -Script "./Modules/ActiveDirectory/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
@@ -587,7 +587,7 @@ stages:
         targetType: 'inline'
         script: '# Write your powershell commands here.
           
-          Invoke-Pester -Script "./Modules/ActiveDirectoryDomainServices/2.0/Tests";
+          Invoke-Pester -Script "./Modules/ActiveDirectoryDomainServices/Tests";
           
           # Use the environment variables input below to pass secret variables to this script.'
         pwsh: true
